@@ -1,0 +1,430 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #555;
+}
+.row{
+    margin: 0 auto;
+    max-width: 980px;
+}
+.kul{
+    margin: 0 auto;
+    max-width: 77%;
+}
+section{
+    padding: 40px 0px;
+}
+}
+.box{
+    padding: 1%;
+}
+.box p{
+    font-size: 90%;
+	line-height: 1.45;
+}
+.box h3{
+    text-align: center;
+}
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+h1{
+    font-size: 240%;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    word-spacing: 4px;  
+    
+}
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Line divide after the h2*/
+h2:after{
+    display: block;
+    height: 3px;
+    background-color: #e67e22;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+/*-----------------------------------------------------------------------------------*/
+/* Style Links*/
+a.logo:link, a.logo:visited{
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: none;
+}
+a.logo:hover, a.logo:active{
+    color: #f0f0f0;
+    border-bottom: none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* Styling all paragraphs inside the box, header, background img, and the welcome text */
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+/* header */
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../img/backround.png');
+    height: 90vh; /* 100% of the viewport's height */
+    background-size: cover;
+    background-position: center;
+    
+}
+.header-nav{
+    background-color: #2c3e50;
+    height: 80px;
+}
+
+.welcome-text{
+    position: absolute;
+    top:50%;
+    left:50%; 
+    width:100%;
+    transform: translate(-50%, -50%);    
+}
+.welcome-text p{
+    color: #bdc3c7;
+    width: 100%;    
+}
+#map{
+    height: 300px;
+    width: 100%;
+}
+/*-------------------------------------------------------------------------*/
+/* Logo and navigation section */
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+    
+}
+p.logo{
+    font-size: 50px;
+    color: #fff;
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+.main-nav li a:link, 
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: #f0f0f0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 80%;
+    border-bottom: 2px solid transparent; /* border exist before hover, but not yet visible*/
+    transition: border-bottom 0.2s;
+    
+}
+.main-nav li a:hover{
+    border-bottom: 2px solid #e67e22;
+}
+.main-nav li a.active{
+    border-bottom: 2px solid #e67e22;
+    color: #e67e22;
+}
+/*-----------------------------------------------------------------------------------*/
+/*   countries section */
+.box img{
+    width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+.country-description{
+    margin-bottom: 5px;
+}
+/* countries feature flags */
+.country-flag{
+    float: left;
+    list-style: none;    
+}
+.country-flag li{
+    display: inline-block;
+/*    margin-left: 40px;*/
+}
+.country-flag h3{
+    font-size: 50px;
+}
+.country-feature img{
+    width: auto;
+    height: 50px;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* General button */
+
+.btn:link, .btn:visited{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 40px;
+    font-weight: 300;
+    text-decoration: none;
+    border: 2px solid #e67e22;
+    color: #f0f0f0;
+    margin-bottom: 50px;
+    background-color: #e67e22;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:hover, .btn:active{
+    background-color: #cf6d17;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*-----------Statistics console ------------------------*/
+
+#list{
+    width: 100%;
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*------------------------------------------------------------------------------------*/
+/* styling the canvas & and the search bar ----*/
+#search-style{
+    width: 100%;
+    padding: 6px 14px;
+    border: 1px solid #002857;
+    margin-bottom: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.unilink{
+    overflow-y: auto;
+    height: 15rem;
+   
+}
+.uni-mur{
+    overflow-y: auto;
+}
+
+.uniTable{
+    border-collapse: collapse;
+    width: 100%;
+}
+.uniTable tr, .uniTable th{
+    border: 1px solid #002857;
+    padding: 10px;
+}
+.uniTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.uniTable tr:hover {background-color: #ddd;}
+
+.uniTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2c3e50;
+    color: white;
+}
+/*------------------------------------------------------------------------------*/
+/*--- footer section -------------*/
+.footer-section{
+    background-color: #2c3e50;
+    padding: 20px;
+    font-size: 80%;
+}
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*-------------------------Media querries--------------------------------------------------*/
+/*
+
+@media only screen and (min-device-width: 768px)  {
+    .welcome-text{
+        width: 100%;
+        
+    }
+    header{
+        height: 68vh;
+    }
+}
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 306px) and (max-width : 362px) and (orientation: portrait) {
+    .welcome-text{
+        margin-top:10%;
+        
+    }
+    header{
+        height: 100vh;
+    }    
+}
+
+@media only screen and (min-width : 250px) and (max-width : 305px) and (orientation: portrait) {
+    .welcome-text{
+        margin-top:10%;
+        
+    }
+    header{
+        height: 100vh;
+    }    
+}
+@media only screen and (max-width: 600px) {
+    .main-nav{
+        float: none;
+        display: block;
+        text-align: left;
+        padding:0;
+
+    }
+    
+    .main-nav li a.active{
+    color: #e67e22;
+        border-bottom: none;
+    
+    }
+    .welcome-text.row h1{
+        font-size: 100%;
+    }
+    .welcome-text.row p{
+        font-size: 80%;
+    }
+    p.logo{
+        font-size: 130%;
+    }
+    .main-nav li a{
+    margin-left: 20px;
+    }
+    .welcome-text{
+        padding-left: 10px;
+        padding-right: 34px;
+    }
+    
+}
+@media only screen and (max-width : 509px){
+    .main-nav li{
+    margin-left: 0;
+        font-size: 90%;
+        margin-top: 20px;       
+        
+    }
+    p.logo{
+        font-size: 130%;
+        margin-top: 0px;
+        height: 10px;
+               
+        
+}
+}
+
+@media only screen and (max-width : 300px){
+    .welcome-text.row h1{
+        font-size: 74%;
+    }
+    .welcome-text.row p{
+        font-size: 65%;
+    }
+    .main-nav li{
+    margin-left: 0;
+        font-size: 90%;
+        
+        
+    }
+    
+    
+    p.logo{
+        font-size: 100%;
+        margin-top: 0px;
+        height: 28px;       
+        
+}
+     .main-nav li a.active{
+    color: #e67e22;        
+    
+    }
+    
+}
+@media only screen and (max-width : 336px){
+     .welcome-text.row h1{
+        font-size: 80%;
+    }
+    .welcome-text.row p{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width : 286px){
+     .welcome-text.row h1{
+        font-size: 70%;
+    }
+    .welcome-text.row p{
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 325px){
+    
+    h2 {
+    font-size: 125%;
+    }
+    .country-flag h3{
+        font-size: 40px;
+        text-align: center;
+    }
+    .country-feature img{
+        margin-left: 25%;
+        margin-right: 22%;
+        height: 80px;
+        
+    }
+    
+    
+    .main-nav li{
+    margin-left: 0;
+        font-size: 80%;
+    
+    }
+}
+
+
+@media only screen and (min-width: 344px) {
+    .welcome-text{
+        margin-top: 12%;
+    }
+}
+
+}
+@media only screen and (max-width: 316px){
+    *{
+        
+        margin: 0;
+        padding: 0;
+        
+    }
+}
+

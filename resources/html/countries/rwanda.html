@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../externals/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../externals/css/grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    
+    <link rel="icon" href="../../img/black-letter-u-512.jpg">
+	<title>Rwanda - UniSearch</title>	
+</head>
+<body>
+<!--    header section-->
+   
+        <nav class="header-nav">
+            <div class="row">
+                <p class="logo"><a class="logo" href="../../../index.html">UniSearch</a></p>         
+                <ul class="main-nav">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../countries/uk.html">UK</a></li>
+                    <li><a class="active" href="../countries/rwanda.html">RWA</a></li>
+                    <li><a href="../countries/mauritius.html">MUR</a></li>
+                </ul>  
+            </div>
+        </nav>
+
+<!--    country + flag section-->
+    <section class="country-feature">
+        <div class="row">
+            <ul class="country-flag">
+                <li><h3>Rwanda</h3></li>
+                <li><img src="../../img/Rwanda.png"></li>
+            </ul>            
+        </div>
+    </section>
+<!--           Google map -->
+         <div id="map"></div>
+
+<!--    University search section  -->
+    <section class="uni-search">
+        <div class="row">
+            <h2>Search University</h2>
+        </div>
+        <div class="row">
+<!--            Implement the search feature here -->
+            <div class="unilink">
+                        
+            </div>
+        </div>
+    </section>
+    
+<!--    Statistics link-->
+    <section class="stats-link">
+        <div class="row">
+            <h2>Statistics</h2>
+        </div>
+        <div class="row">
+            <p>Rwanda is well known for offering higher quality education worldwide. It is your time to check on their statistics in terms on their stance on enrollment of both gender. You can explore the most with our web. Please click on the button below to view stats.</p>
+        </div>
+        <br><br>
+        <div class="row">
+            <a href="../statistics/rwstatistics.html" class="btn">Statistics</a>
+        </div>
+    </section>
+    
+    <!--    Footer-->
+    <footer class="footer-section">
+        <div class="row">
+            <p>Copyright &copy; 2018 UniSearch. All rights reserved!</p>
+        </div>
+    </footer>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: -1.935114, lng: 30.082111};
+
+        // Create a map object and specify the DOM element
+        // for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 10
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Click here for more details'
+        });
+      }
+    </script>
+<!--    <script src="../../js/gmap.js"></script>-->
+    <script src="../../js/murscript.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzNKjElAkEfaURq53D4YSQFR0uNlQqaQI&callback=initMap"
+        async defer></script>    
+</body>
+</html>

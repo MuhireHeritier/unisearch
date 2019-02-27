@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../externals/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../externals/css/grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">    
+    <link rel="icon" href="../../img/black-letter-u-512.jpg">
+	<title>UK - UniSearch</title>
+</head>
+<body>
+<!--    header section-->
+        <nav class="header-nav">
+            <div class="row">
+                <p class="logo"><a class="logo" href="../../../index.html">UniSearch</a></p>       
+                <ul class="main-nav">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a class="active" href="../countries/uk.html">UK</a></li>
+                    <li><a href="../countries/rwanda.html">RWA</a></li>
+                    <li><a href="../countries/mauritius.html">MUR</a></li>
+                </ul>  
+            </div>
+        </nav>
+<!--    country + flag section-->
+    <section class="country-feature">
+        <div class="row">
+            <ul class="country-flag">
+                <li><h3>UNITED KINGDOM</h3></li>
+                <li><img src="../../img/ukflag.png"></li>
+            </ul>            
+        </div>
+    </section>
+<!--           Google map -->
+           <div id="map"></div>
+          
+<!--    University search section  -->
+    <section class="uni-search">
+        <div class="row">
+            <h2>Search University</h2>
+        </div>
+        <div class="row">
+<!--            Implement the search feature here -->
+           <section class="uni-search">
+        <input id="usa-uni-search" type="text" name="search" placeholder="Search here">
+    </section>
+
+    <div class="tables">
+        <table class="usa-uni-list" id="usa-uni-list">
+            <tr>
+                <th class="table-heads">University name</th>
+                <th class="table-heads">Link </th>
+            </tr>
+        </table>
+    </div>
+            
+            <div class="unilink">
+                <table class="uniTable">
+                    <tr>
+                        <th>University Name</th>
+                        <th>Uni Link</th>
+                    </tr>
+    
+                </table>            
+            </div>
+        </div>
+    </section>
+    
+<!--    Statistics link-->
+    <section class="stats-link">
+        <div class="row">
+            <h2>Statistics</h2>
+        </div>
+        <div class="row">
+            <p>UK is well known for offering higher quality education worldwide. It is your time to check on their statistics in terms on their stance on enrollment of both gender. You can explore the most with our web. Please click on the button below to view stats.</p>
+        </div>
+        <br><br>
+        <div class="row">
+            <a href="../statistics/ukstatscopy.html" class="btn">Statistics</a>
+        </div>
+    </section>
+    <!--    Footer-->
+    <footer class="footer-section">
+        <div class="row">
+            <p>Copyright &copy; 2018 UniSearch. All rights reserved!</p>
+        </div>
+    </footer>
+    <script>
+        window.onload = function(){
+            var request = new XMLHttpRequest();
+            request.open('GET', 'https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json',true);
+            //var element = document.getElementsByTagName('canvas');
+
+	    request.onreadystatechange = function(){
+                if(request.readyState=== 4 && request.status=== 200){
+
+                    var response = JSON.parse(request.responseText);
+                    for(var i =0;i<response.length;i++){
+                        if(response[i].country== "United Kingdom"){
+                            var uni = '<tr id="universities"><td>' + response[i].name + 
+                   '</td><td><a target="_blank" href="'+response[i].web_pages+'">' +response[i].web_pages + '</a></td></tr>'
+                   console.log(uni);
+                   $('.uniTable').append(uni);
+                        }
+                    }
+
+                }
+            }
+            request.send();
+        }
+        
+//        $("#usa-uni-search").keyup(function() {
+//       var userInput, table, tableRow, filter, tableData;
+//       userInput = document.getElementById("usa-uni-search");
+//       filter  = userInput.value.toLowerCase();
+//       table = document.getElementById("universities");
+//       tableRow = table.getElementsByTagName("tr");
+//
+//       for (var i = 0; i < tableRow.length; i++) {
+//           tableData = tableRow[i].getElementsByTagName("td")[0];
+//           if (tableData) {
+//             if (tableData.innerHTML.toLowerCase().indexOf(filter) > -1) {
+//               tableRow[i].style.display = "";
+//             } else {
+//               tableRow[i].style.display = "none";
+//             }
+//           }      
+//       }
+//   });  
+        
+    </script>           
+</body>
+</html>

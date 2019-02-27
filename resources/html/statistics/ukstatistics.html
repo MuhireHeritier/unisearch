@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../../../externals/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>        
+        <link rel="stylesheet" type="text/css" href="../../../externals/css/grid.css">
+        <link rel="icon" href="../../img/black-letter-u-512.jpg">
+        <title>UK Stats - UniSearch</title>	
+    </head>
+    <body>
+<!--    header section   -->
+            <nav class="header-nav">
+                <div class="row">
+                    <p class="logo"><a class="logo" href="../../../index.html">UniSearch</a></p>         
+                    <ul class="main-nav">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a class="active" href="../statistics/ukstatistics.html">UK</a></li>
+                        <li><a href="../statistics/sastatistics.html">SA</a></li>
+                        <li><a href="../statistics/murstatistics.html">MUR</a></li>
+                    </ul>  
+                </div>
+            </nav>
+        <section class="country-feature">
+            <div class="row">
+                <ul class="country-flag">
+                    <li><h3>United Kingdom</h3></li>
+                    <li><img src="../../img/ukflag.png"></li>
+                </ul>            
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <h2>View Statistics</h2>
+            </div>
+            <div id="programs" class="row">
+                
+<!--               chart   -->
+                    <select id="list" name="" class="row">
+                        <option value="-1">Chose your programmes</option>
+                        <option value="0">Enrolment in tertiary all programmes, both sexes </option>
+                        <option value="1">Percentage of students enrolled in Agriculture programmes, both sexes (%)</option>                        
+                        <option value="2">Percentage of students enrolled in Education programmes, both sexes (%)</option>
+                        <option value="3">Percentage of students enrolled in Engineering programmes, both sexes (%)</option>
+                        <option value="4">Percentage of students enrolled in Health programmes, both sexes (%)</option>
+                        <option value="5">Percentage of students enrolled in Humanities programmes, both sexes  sexes (%)</option>
+                        <option value="6">Percentage of students enrolled in programmes in unspecified fields, both sexes (%)</option>
+                        <option value="7">Percentage of students enrolled in Science programmes, both sexes (%)</option>
+                        <option value="8">Percentage of students enrolled in Services programmes, both sexes (%)</option>
+                        <option value="9">Percentage of students enrolled in Social Sciences, Business, both sexes (%)</option>                          
+                    </select>
+                <canvas id="myChart"></canvas>
+            </div>
+        </section>
+
+<!--       Footer section  -->
+        <!--    Footer-->
+        <footer class="footer-section">
+            <div class="row">
+                <p>Copyright &copy; 2018 UniSearch. All rights reserved!</p>
+            </div>
+        </footer>
+        <script src="../../js/scriptuk.js" type="text/javascript"></script>
+    </body>
+</html>
